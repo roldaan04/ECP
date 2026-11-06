@@ -1,0 +1,38 @@
+.label {
+  font-family: var(--font-body);
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  line-height: 1.4;
+  text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
+}
+.default {
+  color: inherit;
+}
+.muted {
+  color: var(--ecp-steel);
+}
+:global([data-tone='paper']) .muted {
+  color: var(--ecp-muted);
+}
+/* Rojo sobre papel (5.2:1). En oscuro, el texto pequeño rojo no cumple: se usa blanco + regla roja. */
+.red {
+  color: var(--ecp-red);
+}
+:global([data-tone='dark']) .red,
+:global([data-tone='concrete']) .red {
+  color: var(--ecp-white);
+}
+.rule {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+.rule::before {
+  content: '';
+  width: 28px;
+  height: var(--line-accent);
+  background: var(--ecp-red);
+  flex: none;
+}

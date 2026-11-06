@@ -1,0 +1,110 @@
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--sp-4);
+  margin-top: var(--sp-5);
+}
+.swatch {
+  display: grid;
+  gap: var(--sp-1);
+  font-size: var(--fs-small);
+}
+.chip {
+  display: block;
+  height: 72px;
+  border: var(--line) solid var(--ecp-line-light);
+  border-radius: var(--radius-sm);
+}
+.swName {
+  font-weight: 600;
+}
+.code {
+  font-size: 0.75rem;
+  color: var(--ecp-muted);
+}
+.type {
+  display: grid;
+  gap: var(--sp-5);
+  margin-top: var(--sp-5);
+  max-width: 60rem;
+}
+.display {
+  font-family: var(--font-display);
+  font-size: var(--fs-display);
+  font-weight: 800;
+  line-height: var(--lh-tight);
+  text-transform: uppercase;
+}
+.h1 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
+  font-weight: 800;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+.h2 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.red {
+  color: var(--ecp-red-bright);
+}
+.h3 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.lead {
+  font-size: var(--fs-lead);
+  max-width: 54ch;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-4);
+  margin-top: var(--sp-5);
+}
+.icon {
+  display: inline-grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: var(--line) solid var(--ecp-line-dark);
+  border-radius: var(--radius-sm);
+}
+.lineDemo {
+  margin-top: var(--sp-6);
+  max-width: 900px;
+}
+.split {
+  display: grid;
+  gap: var(--sp-8);
+}
+.shieldBox {
+  display: grid;
+  gap: var(--sp-5);
+  justify-items: start;
+}
+.court {
+  max-width: 480px;
+  margin-top: var(--sp-5);
+}
+.stickyDemo {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--sp-2);
+  max-width: 390px;
+  margin-top: var(--sp-5);
+  padding: 8px 20px;
+  border-top: var(--line) solid var(--ecp-line-dark);
+}
+@media (min-width: 1024px) {
+  .split {
+    grid-template-columns: 7fr 5fr;
+  }
+}

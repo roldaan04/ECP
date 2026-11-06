@@ -1,0 +1,133 @@
+.head {
+  display: grid;
+  gap: var(--sp-5);
+  margin-bottom: var(--sp-8);
+}
+.intro {
+  max-width: 38ch;
+  font-size: var(--fs-lead);
+  line-height: 1.5;
+  color: var(--ecp-muted);
+}
+:global([data-tone='dark']) .intro {
+  color: var(--ecp-steel);
+}
+
+.list {
+  border-top: var(--line) solid var(--ecp-line-light);
+}
+:global([data-tone='dark']) .list,
+:global([data-tone='dark']) .row {
+  border-color: var(--ecp-line-dark);
+}
+.row {
+  border-bottom: var(--line) solid var(--ecp-line-light);
+  position: relative;
+}
+.row::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: var(--line);
+  background: var(--ecp-red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 350ms var(--ease);
+}
+.row:hover::after,
+.row:focus-within::after {
+  transform: scaleX(1);
+}
+
+.link {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: var(--sp-2) var(--sp-4);
+  padding-block: var(--sp-6);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 250ms var(--ease);
+}
+.link:hover,
+.link:focus-visible {
+  transform: translateX(8px);
+}
+.num {
+  grid-row: span 3;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+  color: var(--ecp-muted);
+  transition: color var(--dur-ui) var(--ease);
+}
+:global([data-tone='dark']) .num {
+  color: var(--ecp-steel);
+}
+.link:hover .num,
+.link:focus-visible .num {
+  color: var(--ecp-red);
+}
+.title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-h3);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.text {
+  max-width: 48ch;
+  color: var(--ecp-muted);
+}
+:global([data-tone='dark']) .text {
+  color: var(--ecp-steel);
+}
+.go {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: var(--fs-small);
+  font-weight: 600;
+}
+.goLabel {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color var(--dur-ui) var(--ease);
+}
+.link:hover .goLabel {
+  text-decoration-color: currentColor;
+}
+
+@media (min-width: 1024px) {
+  .head {
+    grid-template-columns: 7fr 5fr;
+    align-items: end;
+  }
+  .intro {
+    justify-self: end;
+  }
+  .link {
+    grid-template-columns: 5rem 6fr 4fr auto;
+    align-items: center;
+    gap: var(--sp-6);
+    padding-block: var(--sp-7);
+  }
+  .num {
+    grid-row: auto;
+    font-size: 2rem;
+  }
+  .go {
+    justify-self: end;
+  }
+  .goLabel {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+}

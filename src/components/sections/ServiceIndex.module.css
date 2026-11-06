@@ -1,0 +1,89 @@
+.grid {
+  display: grid;
+  gap: var(--sp-8);
+}
+.list {
+  border-top: var(--line) solid var(--ecp-line-dark);
+}
+.item {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  gap: var(--sp-4);
+  padding: var(--sp-7) 0;
+  border-bottom: var(--line) solid var(--ecp-line-dark);
+}
+.itemHead {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-5);
+}
+.num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--ecp-steel);
+  font-variant-numeric: tabular-nums;
+}
+.name {
+  font-size: clamp(2rem, 1.5rem + 2.2vw, 3.25rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 0.95;
+}
+.text {
+  max-width: 52ch;
+  color: var(--ecp-steel);
+}
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+.featured {
+  background: var(--ecp-red-deep);
+  padding-inline: var(--sp-6);
+  border-bottom-color: var(--ecp-red-deep);
+  margin-top: var(--sp-5);
+  border-radius: var(--radius-md);
+}
+.featured .num,
+.featured .text {
+  color: var(--ecp-white);
+}
+.featured > *:not(.court) {
+  position: relative;
+  z-index: 1;
+}
+.court {
+  position: absolute;
+  right: -12%;
+  top: -6%;
+  width: 70%;
+  opacity: 0.9;
+  stroke: var(--line-on-red) !important;
+  pointer-events: none;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 5fr 7fr;
+    gap: var(--sp-9);
+    align-items: start;
+  }
+  .aside {
+    position: sticky;
+    top: calc(var(--header-h) + var(--sp-7));
+  }
+  .featured {
+    padding-inline: var(--sp-7);
+  }
+}

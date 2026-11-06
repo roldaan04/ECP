@@ -1,0 +1,55 @@
+.sheet {
+  --sheet-line: var(--ecp-line-dark);
+  --sheet-label: var(--ecp-steel);
+  width: 100%;
+}
+:global([data-tone='paper']) .sheet {
+  --sheet-line: var(--ecp-line-light);
+  --sheet-label: var(--ecp-muted);
+}
+.caption {
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  padding-bottom: var(--sp-3);
+  border-bottom: var(--line-accent) solid var(--ecp-red);
+}
+.list {
+  border-top: var(--line) solid var(--sheet-line);
+}
+.caption + .list {
+  border-top: 0;
+}
+.row {
+  display: grid;
+  grid-template-columns: minmax(7.5rem, 32%) 1fr;
+  gap: var(--sp-4);
+  padding-block: var(--sp-4);
+  border-bottom: var(--line) solid var(--sheet-line);
+  align-items: baseline;
+}
+.label {
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--sheet-label);
+  font-variant-numeric: tabular-nums;
+}
+.value {
+  font-size: var(--fs-body);
+  line-height: 1.45;
+}
+.lg .value {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+@media (max-width: 479px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: var(--sp-1);
+  }
+}

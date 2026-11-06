@@ -1,0 +1,27 @@
+.link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 14px;
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--ecp-white);
+  text-decoration: none;
+}
+.link::after {
+  content: '';
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 6px;
+  height: var(--line-accent);
+  background: var(--ecp-red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--dur-ui) var(--ease);
+}
+.link:hover::after,
+.link[aria-current='page']::after {
+  transform: scaleX(1);
+}

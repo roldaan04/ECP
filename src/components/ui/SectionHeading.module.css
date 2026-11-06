@@ -1,0 +1,40 @@
+.wrap {
+  display: grid;
+  gap: var(--sp-5);
+  max-width: 52rem;
+}
+.title {
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: -0.005em;
+}
+.h2 {
+  font-size: var(--fs-h2);
+  line-height: 0.98;
+}
+.h1 {
+  font-size: var(--fs-h1);
+  line-height: 0.95;
+}
+.intro {
+  max-width: var(--measure);
+  font-size: var(--fs-lead);
+  line-height: 1.5;
+  color: var(--ecp-steel);
+}
+:global([data-tone='paper']) .intro {
+  color: var(--ecp-muted);
+}
+.intro p + p {
+  margin-top: var(--sp-4);
+}
+
+/* Palabra roja: sobre papel #C8161D (5.2:1); sobre negro, rojo brillante solo en tamaño grande. */
+.accent {
+  color: var(--ecp-red);
+}
+:global([data-tone='dark']) .accent,
+:global([data-tone='ink']) .accent,
+:global([data-tone='concrete']) .accent {
+  color: var(--ecp-red-bright);
+}

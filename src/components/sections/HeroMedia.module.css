@@ -1,0 +1,57 @@
+.media {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--ecp-ink);
+  /* Franja de hormigón sin escudo (310×730 px): resolución suficiente para el panel, no para todo el hero. */
+  background-image:
+    linear-gradient(var(--veil-medium), var(--veil-medium)),
+    image-set(
+      url('/textures/hormigon-izq.avif') type('image/avif'),
+      url('/textures/hormigon-izq.webp') type('image/webp')
+    );
+  background-size: cover;
+  background-position: center;
+  min-height: 380px;
+  display: grid;
+  place-items: center;
+}
+.media::before {
+  /* Guía vertical tipo plano/pista */
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: var(--line);
+  background: var(--ecp-line-dark);
+}
+
+.shieldWrap {
+  position: relative;
+  width: min(72%, 340px);
+  padding-block: var(--sp-7);
+}
+
+.photo,
+.photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.photo img {
+  object-fit: cover;
+  object-position: 50% 20%;
+}
+
+@media (min-width: 1024px) {
+  .home {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 41.666%;
+    min-height: 0;
+  }
+  .shieldWrap {
+    width: min(70%, 340px);
+  }
+}

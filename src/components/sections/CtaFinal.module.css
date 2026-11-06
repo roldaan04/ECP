@@ -1,0 +1,101 @@
+.cta {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: var(--ecp-white);
+  background-color: var(--ecp-black);
+  background-image: var(--grain);
+  padding-block: clamp(96px, 5rem + 8vw, 200px) clamp(64px, 4rem + 4vw, 128px);
+  min-height: min(92svh, 860px);
+  display: grid;
+  align-content: center;
+}
+/* Franjas de hormigón sin escudo en los laterales, fundidas a negro hacia el centro */
+.cta::before,
+.cta::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 34%;
+  background-size: cover;
+  opacity: 0.55;
+}
+.cta::before {
+  left: 0;
+  background-image: image-set(
+    url('/textures/hormigon-izq.avif') type('image/avif'),
+    url('/textures/hormigon-izq.webp') type('image/webp')
+  );
+  mask-image: linear-gradient(to right, black 10%, transparent);
+  -webkit-mask-image: linear-gradient(to right, black 10%, transparent);
+}
+.cta::after {
+  right: 0;
+  background-image: image-set(
+    url('/textures/hormigon-der.avif') type('image/avif'),
+    url('/textures/hormigon-der.webp') type('image/webp')
+  );
+  mask-image: linear-gradient(to left, black 10%, transparent);
+  -webkit-mask-image: linear-gradient(to left, black 10%, transparent);
+}
+
+.inner {
+  position: relative;
+  display: grid;
+  gap: var(--sp-6);
+  justify-items: start;
+}
+.title {
+  /* En móvil manda el ancho: la palabra más larga (p. ej. «¿ENTRENAMOS?») cabe en una línea desde 320 px. */
+  font-size: clamp(2.5rem, 0.5rem + 11vw, 9.5rem);
+  font-weight: 800;
+  line-height: 0.88;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  max-width: 14ch;
+}
+.text {
+  max-width: 48ch;
+  font-size: var(--fs-lead);
+  line-height: 1.5;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-4) var(--sp-6);
+  margin-top: var(--sp-3);
+}
+.phone {
+  color: var(--ecp-steel);
+}
+.phone a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--ecp-white);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+.lineWrap {
+  position: absolute;
+  right: 0;
+  bottom: clamp(24px, 4vw, 56px);
+  width: min(62%, 860px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+@media (max-width: 767px) {
+  .cta::before,
+  .cta::after {
+    width: 50%;
+    opacity: 0.4;
+  }
+  .lineWrap {
+    width: 90%;
+    opacity: 0.6;
+  }
+}

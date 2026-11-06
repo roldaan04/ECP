@@ -1,0 +1,16 @@
+.court {
+  width: 100%;
+  height: auto;
+  fill: none;
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+.court * {
+  vector-effect: non-scaling-stroke;
+}
+.dark {
+  stroke: var(--ecp-line-dark);
+}
+.light {
+  stroke: var(--ecp-line-light);
+}

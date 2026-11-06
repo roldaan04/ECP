@@ -1,0 +1,179 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: var(--ecp-black);
+  background-image: var(--grain);
+  color: var(--ecp-white);
+  padding-block: var(--sp-5) clamp(80px, 4rem + 5vw, 160px);
+}
+.inner {
+  position: relative;
+  z-index: 2;
+}
+.grid {
+  display: grid;
+  gap: var(--sp-8);
+  margin-top: clamp(32px, 2rem + 3vw, 88px);
+}
+.copy {
+  display: grid;
+  gap: var(--sp-5);
+  justify-items: start;
+}
+.title {
+  font-size: var(--fs-h1);
+  font-weight: 800;
+  line-height: 0.95;
+  text-transform: uppercase;
+  max-width: 14ch;
+}
+.lead {
+  max-width: 56ch;
+  font-size: var(--fs-lead);
+  line-height: 1.5;
+}
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+  margin-top: var(--sp-2);
+}
+.side {
+  align-self: end;
+}
+.line {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  bottom: var(--sp-5);
+  width: min(48%, 640px);
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+/* Preparación: hoja de planificación */
+.plan {
+  border: var(--line) solid var(--ecp-line-dark);
+  background: var(--ecp-ink);
+  padding: var(--sp-6);
+  border-radius: var(--radius-sm);
+}
+.planNote {
+  margin-top: var(--sp-4);
+  font-size: var(--fs-small);
+  color: var(--ecp-steel);
+}
+
+/* Baloncesto */
+.court {
+  position: absolute;
+  z-index: 0;
+  right: -8%;
+  top: -4%;
+  width: min(760px, 90%);
+  opacity: 1;
+  pointer-events: none;
+}
+.baloncesto .title {
+  max-width: 18ch;
+}
+.basket {
+  display: grid;
+  gap: var(--sp-6);
+}
+.basketPhoto {
+  display: block;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+.basketPhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.roles {
+  border-top: var(--line-accent) solid var(--ecp-red);
+}
+.roles li {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-4);
+  padding-block: var(--sp-3);
+  border-bottom: var(--line) solid var(--ecp-line-dark);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+.roleNum {
+  font-family: var(--font-body);
+  font-size: var(--fs-label);
+  font-weight: 600;
+  color: var(--ecp-steel);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Online: ciclo */
+.cycle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: var(--line) solid var(--ecp-line-dark);
+  border-left: var(--line) solid var(--ecp-line-dark);
+}
+.cycleItem {
+  display: grid;
+  gap: var(--sp-2);
+  align-content: start;
+  padding: var(--sp-5);
+  border-right: var(--line) solid var(--ecp-line-dark);
+  border-bottom: var(--line) solid var(--ecp-line-dark);
+}
+.cycleItem:first-child {
+  border-top: var(--line-accent) solid var(--ecp-red);
+  margin-top: -1px;
+}
+.cycleNum {
+  font-size: var(--fs-label);
+  font-weight: 600;
+  color: var(--ecp-steel);
+  font-variant-numeric: tabular-nums;
+}
+.cycleTitle {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.cycleText {
+  font-size: var(--fs-small);
+  color: var(--ecp-steel);
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 7fr 5fr;
+    gap: var(--sp-9);
+    align-items: end;
+  }
+  .preparacion .grid {
+    grid-template-columns: 6fr 6fr;
+  }
+  .online .grid {
+    grid-template-columns: 6fr 6fr;
+  }
+}
+@media (max-width: 767px) {
+  .line {
+    width: 80%;
+    opacity: 0.5;
+  }
+  .court {
+    width: 130%;
+    right: -40%;
+    opacity: 0.7;
+  }
+}

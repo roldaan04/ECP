@@ -1,0 +1,32 @@
+.hero {
+  background: var(--ecp-black);
+  color: var(--ecp-white);
+  padding-block: var(--sp-5) var(--sp-8);
+}
+.title {
+  margin-top: var(--sp-6);
+  font-size: var(--fs-h1);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.body {
+  display: grid;
+  gap: var(--sp-7);
+  max-width: 48rem;
+}
+.block {
+  display: grid;
+  gap: var(--sp-4);
+}
+.h2 {
+  font-size: var(--fs-h3);
+  text-transform: uppercase;
+}
+.block p {
+  max-width: var(--measure);
+  color: var(--ecp-black);
+}
+.pending {
+  font-size: var(--fs-small);
+  color: var(--ecp-muted) !important;
+}

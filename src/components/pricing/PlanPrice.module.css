@@ -1,0 +1,36 @@
+.consult {
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+.price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 var(--sp-1);
+  font-variant-numeric: tabular-nums;
+}
+.from {
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  margin-right: var(--sp-1);
+}
+.amount {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.25rem, 1.8rem + 1.5vw, 3rem);
+  line-height: 1;
+}
+.unit {
+  font-size: var(--fs-small);
+  opacity: 0.8;
+}
+.per {
+  flex-basis: 100%;
+  font-size: var(--fs-small);
+  opacity: 0.8;
+  margin-top: var(--sp-1);
+}

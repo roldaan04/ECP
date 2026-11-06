@@ -1,0 +1,25 @@
+{
+  "name": "ECP · Emilio Congosto Pérez",
+  "short_name": "ECP",
+  "icons": [
+    {
+      "src": "/favicons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#101010",
+  "background_color": "#101010",
+  "display": "standalone"
+}

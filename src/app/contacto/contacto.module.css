@@ -1,0 +1,112 @@
+.hero {
+  background-color: var(--ecp-black);
+  background-image: var(--grain);
+  color: var(--ecp-white);
+  padding-block: var(--sp-5) var(--section-y);
+}
+.heroGrid {
+  display: grid;
+  gap: var(--sp-8);
+  margin-top: clamp(32px, 2rem + 3vw, 80px);
+}
+.heroCopy {
+  display: grid;
+  gap: var(--sp-5);
+  align-content: start;
+}
+.title {
+  font-size: var(--fs-display);
+  font-weight: 800;
+  line-height: var(--lh-tight);
+  text-transform: uppercase;
+}
+.lead {
+  max-width: 50ch;
+  font-size: var(--fs-lead);
+  line-height: 1.5;
+}
+.channels {
+  display: grid;
+  border-top: var(--line) solid var(--ecp-line-dark);
+}
+.channel {
+  border-bottom: var(--line) solid var(--ecp-line-dark);
+}
+.channelLink {
+  display: grid;
+  gap: var(--sp-2);
+  padding: var(--sp-6) 0;
+  text-decoration: none;
+  transition: padding var(--dur-ui) var(--ease);
+}
+.channel:not(.primary) .channelLink:hover {
+  padding-left: var(--sp-3);
+}
+.primary {
+  background: var(--ecp-red);
+  border-bottom: 0;
+  border-radius: var(--radius-sm);
+  margin-block: var(--sp-4);
+}
+.primary .channelLink {
+  padding: var(--sp-6);
+}
+.primary:hover {
+  background: var(--ecp-red-hover);
+}
+.channelTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-3);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.75rem, 1.4rem + 1.4vw, 2.5rem);
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+.channelText {
+  color: var(--ecp-steel);
+}
+.primary .channelText {
+  color: var(--ecp-white);
+}
+.channelCta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-top: var(--sp-2);
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.areaGrid {
+  display: grid;
+  gap: var(--sp-8);
+}
+.areaMain {
+  display: grid;
+  gap: var(--sp-6);
+  align-content: start;
+}
+.notice {
+  max-width: 60ch;
+  font-size: var(--fs-small);
+  color: var(--ecp-muted);
+}
+.formCol {
+  display: grid;
+  gap: var(--sp-6);
+  align-content: start;
+}
+@media (min-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: 6fr 6fr;
+    gap: var(--sp-9);
+    align-items: end;
+  }
+  .areaGrid {
+    grid-template-columns: 5fr 7fr;
+    gap: var(--sp-9);
+  }
+}

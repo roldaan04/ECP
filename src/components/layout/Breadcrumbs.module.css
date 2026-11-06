@@ -1,0 +1,29 @@
+.nav {
+  font-size: var(--fs-label);
+  color: var(--ecp-steel);
+}
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.item {
+  display: inline-flex;
+  align-items: center;
+}
+.item + .item::before {
+  content: '›';
+  padding-inline: var(--sp-2);
+  color: var(--ecp-steel);
+}
+.item a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  text-decoration: none;
+  color: var(--ecp-white);
+}
+.item a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--ecp-red);
+}

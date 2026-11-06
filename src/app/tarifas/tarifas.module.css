@@ -1,0 +1,56 @@
+.hero {
+  background-color: var(--ecp-black);
+  background-image: var(--grain);
+  color: var(--ecp-white);
+  padding-block: var(--sp-5) clamp(56px, 3rem + 4vw, 112px);
+}
+.heroGrid {
+  display: grid;
+  gap: var(--sp-6);
+  margin-top: clamp(32px, 2rem + 3vw, 80px);
+  align-items: end;
+}
+.title {
+  margin-top: var(--sp-4);
+  font-size: var(--fs-display);
+  font-weight: 800;
+  line-height: var(--lh-tight);
+  text-transform: uppercase;
+}
+.lead {
+  max-width: 48ch;
+  font-size: var(--fs-lead);
+  line-height: 1.5;
+  color: var(--ecp-steel);
+}
+.foot {
+  display: grid;
+  gap: var(--sp-7);
+  margin-top: var(--sp-8);
+}
+.note {
+  max-width: 60ch;
+  color: var(--ecp-muted);
+}
+.assessment {
+  display: grid;
+  gap: var(--sp-4);
+  justify-items: start;
+  padding: var(--sp-6);
+  border-left: 3px solid var(--ecp-red);
+  background: var(--ecp-white);
+  max-width: 48rem;
+}
+.assessTitle {
+  font-size: var(--fs-h3);
+  text-transform: uppercase;
+}
+@media (min-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: 7fr 5fr;
+  }
+  .foot {
+    grid-template-columns: 5fr 7fr;
+    align-items: start;
+  }
+}

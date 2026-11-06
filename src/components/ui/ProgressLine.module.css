@@ -1,0 +1,35 @@
+.line {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  fill: none;
+}
+.path {
+  /* Grosor en unidades del viewBox (≈2 px a los tamaños de uso). Sin non-scaling-stroke:
+     en Chrome rompe el cálculo de pathLength y la animación de trazo. */
+  stroke-width: 2.5;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+}
+.red .path {
+  stroke: var(--ecp-red);
+}
+.muted .path {
+  stroke: var(--ecp-line-dark);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :global(.js) .animate .path {
+    stroke-dashoffset: 1;
+    transition: stroke-dashoffset var(--dur-draw) var(--ease);
+  }
+  :global(.js) .animate .head {
+    transition-delay: calc(var(--dur-draw) - 200ms);
+    transition-duration: 300ms;
+  }
+  :global([data-revealed]) .animate .path {
+    stroke-dashoffset: 0;
+  }
+}

@@ -1,0 +1,113 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: var(--ecp-black);
+  background-image: var(--grain);
+  color: var(--ecp-white);
+}
+
+.grid {
+  position: relative;
+  z-index: 2;
+}
+.copy {
+  padding-block: clamp(48px, 3rem + 4vw, 120px) clamp(48px, 3rem + 3vw, 96px);
+  display: grid;
+  gap: var(--sp-5);
+  justify-items: start;
+}
+
+.label {
+  max-width: 60ch;
+}
+
+.title {
+  font-size: var(--fs-display);
+  font-weight: 800;
+  line-height: var(--lh-tight);
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin-block: var(--sp-2) var(--sp-3);
+}
+.line_ {
+  display: block;
+  padding-left: calc(var(--i) * 0.5em);
+}
+.accent {
+  color: var(--ecp-red-bright);
+}
+
+.lead {
+  max-width: 54ch;
+  font-size: var(--fs-lead);
+  line-height: 1.5;
+  color: var(--ecp-white);
+}
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+  margin-top: var(--sp-2);
+}
+.note {
+  font-size: var(--fs-small);
+  color: var(--ecp-steel);
+  max-width: 50ch;
+}
+
+.creds {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2) 0;
+  margin-top: var(--sp-5);
+  padding-top: var(--sp-5);
+  border-top: var(--line) solid var(--ecp-line-dark);
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.creds li {
+  padding-right: var(--sp-4);
+  margin-right: var(--sp-4);
+  border-right: var(--line) solid var(--ecp-line-dark);
+}
+.creds li:last-child {
+  border-right: 0;
+  margin-right: 0;
+}
+
+/* Línea de progresión: sube por la base del hero, bajo el texto, y entra en el panel de medios */
+.lineWrap {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  bottom: var(--sp-6);
+  pointer-events: none;
+}
+.line {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    min-height: max(min(calc(100svh - var(--header-h)), 920px), 640px);
+    display: flex;
+    align-items: center;
+  }
+  .grid {
+    width: 100%;
+  }
+  .copy {
+    width: 58.333%;
+    padding-right: var(--sp-7);
+    padding-bottom: 168px;
+  }
+  .lineWrap {
+    display: block;
+    right: 12%;
+  }
+}

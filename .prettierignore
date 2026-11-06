@@ -1,0 +1,11 @@
+.next
+out
+node_modules
+public
+ecp-assets
+test-results
+playwright-report
+package-lock.json
+.claude
+CLAUDE.md
+docs

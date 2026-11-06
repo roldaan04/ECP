@@ -1,0 +1,31 @@
+.section {
+  position: relative;
+  isolation: isolate;
+}
+.sp-default {
+  padding-block: var(--section-y);
+}
+.sp-tight {
+  padding-block: clamp(48px, 3rem + 3vw, 96px);
+}
+.sp-none {
+  padding-block: 0;
+}
+
+.dark {
+  background: var(--ecp-black);
+  color: var(--ecp-white);
+}
+.ink {
+  background: var(--ecp-ink);
+  color: var(--ecp-white);
+}
+.paper {
+  background: var(--ecp-paper);
+  color: var(--ecp-black);
+}
+.concrete {
+  background-color: var(--ecp-black);
+  background-image: var(--grain);
+  color: var(--ecp-white);
+}

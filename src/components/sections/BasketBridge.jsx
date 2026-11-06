@@ -1,0 +1,44 @@
+import Section from '@/components/ui/Section';
+import SectionHeading from '@/components/ui/SectionHeading';
+import Button from '@/components/ui/Button';
+import CourtLines from '@/components/ui/CourtLines';
+import ProgressLine from '@/components/ui/ProgressLine';
+import Reveal from '@/components/ui/Reveal';
+import styles from './BasketBridge.module.css';
+
+/**
+ * Puente al baloncesto (Home): composición invertida con líneas de pista y la línea de progresión
+ * saliendo hacia la landing de la especialidad.
+ * @param {{ content: typeof import('@/content/home').home.basket }} props
+ */
+export default function BasketBridge({ content }) {
+  return (
+    <Section tone="paper" labelledBy="baloncesto" className={styles.section}>
+      <div className={styles.grid}>
+        <div className={styles.graphic} aria-hidden="true">
+          <CourtLines tone="light" className={styles.court} />
+        </div>
+        <div className={styles.body}>
+          <SectionHeading
+            id="baloncesto"
+            label={content.label}
+            title={content.title}
+            accent={content.accent}
+          />
+          <p className={styles.text}>{content.text}</p>
+          <ul role="list" className={styles.notation}>
+            {content.notation.map((n) => (
+              <li key={n}>{n}</li>
+            ))}
+          </ul>
+          <Button href="/entrenador-baloncesto-madrid/" variant="outline-light">
+            {content.cta}
+          </Button>
+        </div>
+      </div>
+      <Reveal mode="draw" className={styles.lineWrap}>
+        <ProgressLine steps={3} run={200} rise={40} arrow />
+      </Reveal>
+    </Section>
+  );
+}

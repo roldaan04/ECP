@@ -1,0 +1,11 @@
+node_modules/
+.next/
+out/
+.env*
+!.env.example
+test-results/
+playwright-report/
+*.log
+.DS_Store
+Thumbs.db
+docs/capturas/

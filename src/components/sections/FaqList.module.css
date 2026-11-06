@@ -1,0 +1,86 @@
+.grid {
+  display: grid;
+  gap: var(--sp-7);
+}
+.list {
+  border-top: var(--line) solid var(--ecp-line-light);
+}
+:global([data-tone='dark']) .list,
+:global([data-tone='dark']) .item {
+  border-color: var(--ecp-line-dark);
+}
+.item {
+  border-bottom: var(--line) solid var(--ecp-line-light);
+}
+.summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-5);
+  min-height: 64px;
+  padding-block: var(--sp-5);
+  cursor: pointer;
+  list-style: none;
+}
+.summary::-webkit-details-marker {
+  display: none;
+}
+.summary::marker {
+  content: '';
+}
+.q {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-transform: none;
+}
+.icon {
+  position: relative;
+  flex: none;
+  width: 20px;
+  height: 20px;
+  transition: transform 250ms var(--ease);
+}
+.icon::before,
+.icon::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 18px;
+  height: var(--line-accent);
+  background: currentColor;
+  transform: translate(-50%, -50%);
+}
+.icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.item[open] .icon {
+  transform: rotate(45deg);
+}
+.item[open] .icon::before,
+.item[open] .icon::after {
+  background: var(--ecp-red);
+}
+.summary:hover .q {
+  text-decoration: underline;
+  text-decoration-color: var(--ecp-red);
+  text-underline-offset: 0.25em;
+}
+.a {
+  padding-bottom: var(--sp-6);
+  max-width: var(--measure);
+  color: var(--ecp-muted);
+}
+:global([data-tone='dark']) .a {
+  color: var(--ecp-steel);
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 4fr 8fr;
+    gap: var(--sp-9);
+    align-items: start;
+  }
+}

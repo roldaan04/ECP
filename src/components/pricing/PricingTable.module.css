@@ -1,0 +1,43 @@
+.wrap {
+  display: grid;
+  gap: var(--sp-7);
+}
+.tablist {
+  display: inline-flex;
+  justify-self: start;
+  border: var(--line) solid var(--ecp-black);
+  border-radius: var(--radius-sm);
+  padding: 4px;
+  gap: 4px;
+}
+.tab {
+  min-height: 48px;
+  min-width: 140px;
+  padding: 10px 22px;
+  background: none;
+  border: 0;
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ecp-black);
+  transition:
+    background-color var(--dur-ui) var(--ease),
+    color var(--dur-ui) var(--ease);
+}
+.tab[aria-selected='true'] {
+  background: var(--ecp-black);
+  color: var(--ecp-white);
+}
+.tab:focus-visible {
+  outline: 2px solid var(--ecp-black);
+  outline-offset: 3px;
+}
+.panel:focus-visible {
+  outline: 2px solid var(--ecp-black);
+  outline-offset: 6px;
+}
+.panel[hidden] {
+  display: none;
+}
