@@ -108,6 +108,7 @@ export const home = {
     accent: 'entrenar',
     intro: 'Sesiones sueltas, bonos o planes online. Te oriento sobre cuál encaja con tu objetivo.',
     tone: 'paper',
+    hideOnMobile: true,
     planIds: ['sesion', 'bono4', 'online-plus'],
     cta: 'Ver todas las tarifas',
   },

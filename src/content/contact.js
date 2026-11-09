@@ -9,17 +9,12 @@ export const contact = {
   hero: {
     label: 'Contacto · Madrid y online',
     title: 'Hablemos',
-    lead: 'La forma más rápida de empezar es escribirme por WhatsApp. Cuéntame tu objetivo, de dónde partes y tu disponibilidad, y te respondo personalmente.',
+    lead: 'Cuéntame tu objetivo. Te respondo personalmente.',
   },
   channels: {
     label: 'Canales',
     title: 'Elige cómo contactar',
-    whatsapp: {
-      tag: 'Recomendado',
-      title: 'WhatsApp',
-      text: 'Escríbeme y cuéntame tu caso.',
-      cta: 'Escríbeme por WhatsApp',
-    },
+    whatsapp: { cta: 'Escríbeme por WhatsApp' },
     phone: { tag: 'Teléfono', title: 'Llámame', text: 'Si prefieres hablar directamente.' },
     instagram: { tag: 'Instagram', title: 'Sígueme', text: 'Entrenamientos, ideas y día a día.' },
   },
@@ -33,8 +28,6 @@ export const contact = {
       { label: 'Público', value: 'Todas las edades (menores de 14, con autorización)' },
     ],
   },
-  metaNotice:
-    'Si me escribes por WhatsApp, ten en cuenta que esa conversación la gestiona también Meta Platforms (propietaria de WhatsApp) según su propia política de privacidad.',
   form: {
     label: 'Formulario',
     title: '¿Prefieres un formulario?',

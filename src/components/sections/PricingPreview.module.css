@@ -75,3 +75,10 @@
 :global([data-tone='paper']) .note {
   color: var(--ecp-muted);
 }
+
+/* En móvil (<768 px) la barra CTA fija ya da acceso a Tarifas: la sección se oculta si el contenido lo pide */
+@media (max-width: 767px) {
+  .hideOnMobile {
+    display: none;
+  }
+}

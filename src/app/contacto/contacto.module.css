@@ -21,9 +21,13 @@
   text-transform: uppercase;
 }
 .lead {
-  max-width: 50ch;
+  max-width: 32ch;
   font-size: var(--fs-lead);
   line-height: 1.5;
+}
+.cta {
+  justify-self: start;
+  margin-top: var(--sp-2);
 }
 .channels {
   display: grid;
@@ -39,20 +43,8 @@
   text-decoration: none;
   transition: padding var(--dur-ui) var(--ease);
 }
-.channel:not(.primary) .channelLink:hover {
+.channelLink:hover {
   padding-left: var(--sp-3);
-}
-.primary {
-  background: var(--ecp-red);
-  border-bottom: 0;
-  border-radius: var(--radius-sm);
-  margin-block: var(--sp-4);
-}
-.primary .channelLink {
-  padding: var(--sp-6);
-}
-.primary:hover {
-  background: var(--ecp-red-hover);
 }
 .channelTitle {
   display: inline-flex;
@@ -66,19 +58,6 @@
 }
 .channelText {
   color: var(--ecp-steel);
-}
-.primary .channelText {
-  color: var(--ecp-white);
-}
-.channelCta {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--sp-2);
-  margin-top: var(--sp-2);
-  font-size: var(--fs-label);
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
 }
 .areaGrid {
   display: grid;

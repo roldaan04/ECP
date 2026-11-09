@@ -1,7 +1,6 @@
 import { buildMetadata } from '@/lib/seo';
 import { env } from '@/lib/env';
 import { site } from '@/config/site';
-import { waLink } from '@/lib/whatsapp';
 import { breadcrumbSchema, graph, personSchema } from '@/lib/schema';
 import { contact } from '@/content/contact';
 import JsonLd from '@/components/seo/JsonLd';
@@ -11,6 +10,7 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import Label from '@/components/ui/Label';
 import TechSheet from '@/components/ui/TechSheet';
 import Icon from '@/components/ui/Icon';
+import WhatsAppButton from '@/components/ui/WhatsAppButton';
 import ContactForm from '@/components/forms/ContactForm';
 import styles from './contacto.module.css';
 
@@ -41,29 +41,12 @@ export default function Page() {
                 {contact.hero.title}
               </h1>
               <p className={styles.lead}>{contact.hero.lead}</p>
+              <WhatsAppButton context="home" size="lg" className={styles.cta}>
+                {channels.whatsapp.cta}
+              </WhatsAppButton>
             </div>
 
             <ul role="list" className={styles.channels} aria-label={channels.title}>
-              <li className={`${styles.channel} ${styles.primary}`}>
-                <a
-                  href={waLink('home')}
-                  target="_blank"
-                  rel="noopener"
-                  className={styles.channelLink}
-                  data-track="click_whatsapp"
-                  data-track-context="contacto"
-                >
-                  <Label as="span">{channels.whatsapp.tag}</Label>
-                  <span className={styles.channelTitle}>
-                    <Icon name="whatsapp" size={28} /> {channels.whatsapp.title}
-                  </span>
-                  <span className={styles.channelText}>{channels.whatsapp.text}</span>
-                  <span className={styles.channelCta}>
-                    {channels.whatsapp.cta} <Icon name="arrow" size={18} />
-                  </span>
-                  <span className="sr-only"> (se abre en una ventana nueva)</span>
-                </a>
-              </li>
               <li className={styles.channel}>
                 <a href={site.phone.href} className={styles.channelLink} data-track="click_tel">
                   <Label as="span" tone="muted">
