@@ -27,6 +27,12 @@
   /* Velos (negro con alfa) */
   --veil-strong: rgb(14 14 14 / 0.86);
   --veil-medium: rgb(14 14 14 / 0.72);
+  /* Hormigón a todo el ancho: mosaico espejado de 620 px (sin costuras), siempre bajo un velo */
+  --concrete: image-set(
+    url('/textures/hormigon-espejo.avif') type('image/avif'),
+    url('/textures/hormigon-espejo.webp') type('image/webp')
+  );
+  --concrete-size: 620px auto;
   --header-scrolled: rgb(14 14 14 / 0.92);
   --line-on-red: rgb(255 255 255 / 0.16);
 

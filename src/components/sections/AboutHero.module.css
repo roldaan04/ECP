@@ -1,7 +1,8 @@
 .hero {
   position: relative;
   background-color: var(--ecp-black);
-  background-image: var(--grain);
+  background-image: linear-gradient(var(--veil-strong), var(--veil-strong)), var(--concrete);
+  background-size: auto, var(--concrete-size);
   color: var(--ecp-white);
   padding-block: var(--sp-5) var(--section-y);
 }
@@ -24,13 +25,6 @@
 }
 .title span {
   display: block;
-}
-.title span:nth-child(2) {
-  padding-left: 0.4em;
-}
-.last {
-  padding-left: 0.8em;
-  color: var(--ecp-red-bright);
 }
 .lead {
   max-width: 52ch;

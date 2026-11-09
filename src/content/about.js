@@ -52,28 +52,6 @@ export const about = {
     ],
     note: 'Mi experiencia en Laso Academy y Mirasur School describe mi trayectoria profesional y deportiva; no implica que estas entidades respalden mis servicios.',
   },
-  principles: {
-    label: 'Cómo trabajo',
-    title: 'Tres ideas que no negocio',
-    accent: 'negocio',
-    items: [
-      {
-        tag: 'Idea 01',
-        title: 'Primero escuchar',
-        text: 'Tu objetivo, tu historia y tu semana real. El plan empieza ahí, no en una plantilla.',
-      },
-      {
-        tag: 'Idea 02',
-        title: 'Cada carga tiene un porqué',
-        text: 'Si un ejercicio está en tu plan, te puedo explicar para qué sirve.',
-      },
-      {
-        tag: 'Idea 03',
-        title: 'Medir lo que importa',
-        text: 'Revisamos tu progreso con datos sencillos y ajustamos sin dramas.',
-      },
-    ],
-  },
   services: {
     label: 'Cómo puedo ayudarte',
     title: 'Elige por dónde empezar',

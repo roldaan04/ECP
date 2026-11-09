@@ -10,7 +10,6 @@ import Label from '@/components/ui/Label';
 import WhatsAppButton from '@/components/ui/WhatsAppButton';
 import PricingTable from '@/components/pricing/PricingTable';
 import PlanSheet from '@/components/pricing/PlanSheet';
-import FaqList from '@/components/sections/FaqList';
 import CtaFinal from '@/components/sections/CtaFinal';
 import { home } from '@/content/home';
 import styles from './tarifas.module.css';
@@ -83,7 +82,6 @@ export default function Page() {
         </div>
       </Section>
 
-      <FaqList content={{ ...tarifas.faqHeading, items: tarifas.faq }} tone="dark" />
       <CtaFinal content={home.ctaFinal} context="tarifas" />
     </>
   );

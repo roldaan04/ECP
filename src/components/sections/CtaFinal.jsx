@@ -7,7 +7,7 @@ import { Accent } from '@/components/ui/SectionHeading';
 import styles from './CtaFinal.module.css';
 
 /**
- * CTA final sobre hormigón (franjas laterales sin escudo, fundidas a negro): titular enorme,
+ * CTA final sobre hormigón a todo el ancho (mosaico espejado bajo un velo): titular enorme,
  * WhatsApp grande, teléfono visible y la línea de progresión que termina en flecha.
  * Oculta la barra CTA móvil mientras está en viewport (data-sticky-end).
  * @param {{ content: { label?: string, title: string, accent?: string, text: string, cta: string, phoneLabel: string },

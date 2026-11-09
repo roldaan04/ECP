@@ -5,7 +5,6 @@ import { services } from '@/config/navigation';
 import JsonLd from '@/components/seo/JsonLd';
 import AboutHero from '@/components/sections/AboutHero';
 import AboutTimeline from '@/components/sections/AboutTimeline';
-import LandingBlock from '@/components/sections/LandingBlock';
 import AudienceList from '@/components/sections/AudienceList';
 import CtaFinal from '@/components/sections/CtaFinal';
 
@@ -27,7 +26,6 @@ export default function Page() {
       />
       <AboutHero content={about} />
       <AboutTimeline content={about.timeline} />
-      <LandingBlock index={2} block={{ type: 'grid', tone: 'dark', ...about.principles }} />
       <AudienceList
         tone="paper"
         quote={false}

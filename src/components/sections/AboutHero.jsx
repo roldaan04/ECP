@@ -26,10 +26,8 @@ export default function AboutHero({ content }) {
                 {content.hero.label}
               </Label>
               <h1 id="about-title" className={styles.title}>
-                {content.hero.title.split(' ').map((word, i, arr) => (
-                  <span key={word} className={i === arr.length - 1 ? styles.last : undefined}>
-                    {word}{' '}
-                  </span>
+                {content.hero.title.split(' ').map((word) => (
+                  <span key={word}>{word} </span>
                 ))}
               </h1>
               <p className={styles.lead}>{content.hero.lead}</p>

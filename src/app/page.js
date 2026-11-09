@@ -8,7 +8,6 @@ import MethodSteps from '@/components/sections/MethodSteps';
 import ProfileTeaser from '@/components/sections/ProfileTeaser';
 import PricingPreview from '@/components/sections/PricingPreview';
 import Testimonials from '@/components/sections/Testimonials';
-import FaqList from '@/components/sections/FaqList';
 import CtaFinal from '@/components/sections/CtaFinal';
 
 export const metadata = buildMetadata(home.seo);
@@ -23,7 +22,6 @@ export default function Page() {
       <ProfileTeaser content={home.profile} />
       <PricingPreview content={home.pricing} />
       <Testimonials />
-      <FaqList content={home.faq} />
       <CtaFinal content={home.ctaFinal} />
     </>
   );

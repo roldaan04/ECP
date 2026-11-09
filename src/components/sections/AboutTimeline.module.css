@@ -49,7 +49,13 @@
 @media (min-width: 1024px) {
   .grid {
     grid-template-columns: 5fr 7fr;
-    gap: var(--sp-9);
+    column-gap: var(--sp-9);
+    row-gap: 0;
     align-items: start;
+  }
+  /* La línea temporal arranca donde termina el titular (fila 2, columna derecha) */
+  .grid > :last-child {
+    grid-column: 2;
+    grid-row: 2;
   }
 }
