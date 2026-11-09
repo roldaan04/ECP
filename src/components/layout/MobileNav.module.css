@@ -120,11 +120,6 @@
   min-height: 44px;
   font-size: 1.125rem;
   font-weight: 500;
-  text-decoration: none;
-}
-.subLink[aria-current='page'] {
-  text-decoration: underline;
-  text-decoration-color: var(--ecp-red);
 }
 
 .foot {

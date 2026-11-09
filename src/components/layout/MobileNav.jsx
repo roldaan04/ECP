@@ -126,14 +126,7 @@ export default function MobileNav() {
                           <ul role="list" className={styles.sub}>
                             {it.children.map((c) => (
                               <li key={c.path}>
-                                <Link
-                                  href={c.path}
-                                  className={styles.subLink}
-                                  aria-current={pathname === c.path ? 'page' : undefined}
-                                  onClick={() => setOpen(false)}
-                                >
-                                  {c.short}
-                                </Link>
+                                <span className={styles.subLink}>{c.short}</span>
                               </li>
                             ))}
                           </ul>

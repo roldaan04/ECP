@@ -1,14 +1,13 @@
 'use client';
 
 import { useEffect, useId, useRef, useState } from 'react';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Icon from '@/components/ui/Icon';
 import styles from './ServicesMenu.module.css';
 
 /**
  * Desplegable «Servicios» del header (desktop). Botón con aria-expanded; cierra con Esc,
- * clic fuera o al salir el foco. Los enlaces existen también en el footer y en el menú móvil.
+ * clic fuera o al salir el foco. Las entradas son texto estático (sin enlaces a las landings).
  * @param {{ label: string, items: { path: string, label: string, short?: string, description?: string }[] }} props
  */
 export default function ServicesMenu({ label, items }) {
@@ -68,12 +67,7 @@ export default function ServicesMenu({ label, items }) {
         <ul role="list" className={styles.list}>
           {items.map((it, i) => (
             <li key={it.path}>
-              <Link
-                href={it.path}
-                className={styles.item}
-                aria-current={pathname === it.path ? 'page' : undefined}
-                onClick={() => setOpen(false)}
-              >
+              <div className={styles.item}>
                 <span className={styles.num} aria-hidden="true">
                   {String(i + 1).padStart(2, '0')}
                 </span>
@@ -81,7 +75,7 @@ export default function ServicesMenu({ label, items }) {
                   <span className={styles.title}>{it.short || it.label}</span>
                   {it.description ? <span className={styles.desc}>{it.description}</span> : null}
                 </span>
-              </Link>
+              </div>
             </li>
           ))}
         </ul>

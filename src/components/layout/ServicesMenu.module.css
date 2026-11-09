@@ -56,13 +56,8 @@
   grid-template-columns: 2.25rem 1fr;
   gap: var(--sp-3);
   padding: 14px 20px;
-  text-decoration: none;
   color: var(--ecp-white);
-  transition: background-color var(--dur-ui) var(--ease);
-}
-.item:hover,
-.item[aria-current='page'] {
-  background: var(--ecp-graphite);
+  cursor: default;
 }
 .num {
   font-family: var(--font-display);
@@ -71,9 +66,6 @@
   color: var(--ecp-steel);
   font-variant-numeric: tabular-nums;
   line-height: 1.3;
-}
-.item:hover .num {
-  color: var(--ecp-red-bright);
 }
 .body {
   display: grid;
