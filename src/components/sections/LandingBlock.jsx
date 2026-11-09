@@ -8,12 +8,13 @@ import Icon from '@/components/ui/Icon';
 import Reveal from '@/components/ui/Reveal';
 import MethodSteps from '@/components/sections/MethodSteps';
 import PricingPreview from '@/components/sections/PricingPreview';
+import BasketBridge from '@/components/sections/BasketBridge';
 import { profileSheetRows } from '@/lib/profile';
 import styles from './LandingBlock.module.css';
 
 /**
  * Bloque de contenido de landing. El tipo decide la composición (no todas las secciones son iguales):
- * list · grid · steps · split · profile · career · note · related · pillars · pricing
+ * list · grid · steps · split · profile · career · note · related · pillars · pricing · court
  *
  * @param {{ block: any, index: number }} props
  */
@@ -36,6 +37,9 @@ export default function LandingBlock({ block, index }) {
 
     case 'pricing':
       return <PricingPreview content={block} />;
+
+    case 'court':
+      return <BasketBridge content={block} />;
 
     case 'list':
       return (

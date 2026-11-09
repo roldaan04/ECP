@@ -19,7 +19,7 @@ export default function HeroHome({ content }) {
   return (
     <section className={styles.hero} data-tone="dark" data-sticky-start="" aria-labelledby="hero-title">
       <Reveal mode="draw" className={styles.lineWrap}>
-        <ProgressLine steps={4} run={220} rise={22} lead={0} arrow className={styles.line} />
+        <ProgressLine steps={4} run={220} rise={27} lead={260} arrow className={styles.line} />
       </Reveal>
 
       <div className={`container ${styles.grid}`}>

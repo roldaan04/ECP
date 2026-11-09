@@ -7,9 +7,9 @@ import Reveal from '@/components/ui/Reveal';
 import styles from './BasketBridge.module.css';
 
 /**
- * Puente al baloncesto (Home): composición invertida con líneas de pista y la línea de progresión
- * saliendo hacia la landing de la especialidad.
- * @param {{ content: typeof import('@/content/home').home.basket }} props
+ * Bloque de baloncesto: composición invertida con líneas de pista y la línea de progresión.
+ * Se usa en la landing de baloncesto (bloque `court`). Si el contenido trae `cta`, añade el botón a la landing.
+ * @param {{ content: { label: string, title: string, accent?: string, text: string, notation: string[], cta?: string } }} props
  */
 export default function BasketBridge({ content }) {
   return (
@@ -31,9 +31,11 @@ export default function BasketBridge({ content }) {
               <li key={n}>{n}</li>
             ))}
           </ul>
-          <Button href="/entrenador-baloncesto-madrid/" variant="outline-light">
-            {content.cta}
-          </Button>
+          {content.cta ? (
+            <Button href="/entrenador-baloncesto-madrid/" variant="outline-light">
+              {content.cta}
+            </Button>
+          ) : null}
         </div>
       </div>
       <Reveal mode="draw" className={styles.lineWrap}>

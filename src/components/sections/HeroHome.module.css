@@ -25,14 +25,14 @@
 .title {
   font-size: var(--fs-display);
   font-weight: 800;
-  line-height: var(--lh-tight);
+  /* Interlineado justo para que las tildes (CONDICIÓN, MÉTODO) no toquen la línea de arriba */
+  line-height: 1.04;
   letter-spacing: -0.01em;
   text-transform: uppercase;
   margin-block: var(--sp-2) var(--sp-3);
 }
 .line_ {
   display: block;
-  padding-left: calc(var(--i) * 0.5em);
 }
 .accent {
   color: var(--ecp-red-bright);
@@ -76,6 +76,7 @@
 .creds li:last-child {
   border-right: 0;
   margin-right: 0;
+  padding-right: 0;
 }
 
 /* Línea de progresión: sube por la base del hero, bajo el texto, y entra en el panel de medios */
@@ -90,6 +91,10 @@
 }
 .line {
   width: 100%;
+}
+/* Con el tramo inicial largo (lead) el SVG se reduce de escala: se compensa el grosor del trazo */
+.lineWrap .line path {
+  stroke-width: 3.1;
 }
 
 @media (min-width: 1024px) {

@@ -24,10 +24,44 @@
   background: var(--ecp-line-dark);
 }
 
+/* «Plano» técnico: marco cuadrado con guías, el escudo en el centro */
+.plate {
+  position: relative;
+  width: min(80%, 480px);
+  aspect-ratio: 1;
+  margin-block: var(--sp-7);
+  display: grid;
+  place-items: center;
+}
+.frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  color: var(--ecp-steel);
+  fill: none;
+  stroke: currentColor;
+  vector-effect: non-scaling-stroke;
+}
+.frame * {
+  vector-effect: non-scaling-stroke;
+  stroke-width: 1;
+}
+.frameLines {
+  opacity: 0.32;
+}
+.frameDashed {
+  opacity: 0.28;
+  stroke-dasharray: 4 6;
+}
+.frameTicks {
+  opacity: 0.6;
+}
+
 .shieldWrap {
   position: relative;
-  width: min(72%, 340px);
-  padding-block: var(--sp-7);
+  width: 72%;
 }
 
 .photo,
@@ -50,8 +84,13 @@
     bottom: 0;
     width: 41.666%;
     min-height: 0;
+    /* El plano se centra en la zona por encima de la línea de progresión (mismo padding que el texto) */
+    padding-block: clamp(48px, 3rem + 4vw, 120px) 168px;
   }
-  .shieldWrap {
-    width: min(70%, 340px);
+  .home .plate {
+    margin-block: 0;
+  }
+  .plate {
+    width: min(76%, 480px);
   }
 }

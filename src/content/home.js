@@ -11,10 +11,10 @@ export const home = {
   },
 
   hero: {
-    label: 'Preparador físico · Entrenador personal · Madrid / Online',
+    label: 'Preparador físico · Entrenador personal',
     titleLines: ['Fuerza.', 'Condición.', 'Método.'],
     accentLine: 2,
-    lead: 'Soy Emilio Congosto, preparador físico y entrenador personal en Madrid, graduado en CAFYD. Diseño tu entrenamiento de fuerza y condición física a partir de tu punto de partida, en persona o online.',
+    lead: 'Soy Emilio Congosto, preparador físico y entrenador personal en Madrid, graduado en CAFYD. Diseño tu entrenamiento de fuerza y condición física a partir de tu punto de partida, en persona y también online.',
     primaryCta: 'Escríbeme por WhatsApp',
     secondaryCta: 'Ver tarifas',
     note: 'Respondo personalmente. Cuéntame tu objetivo y vemos cómo encajarlo.',
@@ -22,42 +22,8 @@ export const home = {
     photoAlt: 'Emilio Congosto en la sala de fuerza',
   },
 
-  audience: {
-    label: 'Para quién · 4 puntos de partida',
-    title: '¿De dónde partes?',
-    accent: 'partes',
-    intro:
-      'No hay un plan para todo el mundo. Hay un punto de partida, un objetivo y el camino entre los dos.',
-    items: [
-      {
-        title: 'Quiero ganar fuerza y sentirme mejor',
-        text: 'Empezar o retomar con un plan claro, sin improvisar en el gimnasio.',
-        href: '/entrenador-personal-madrid/',
-        linkLabel: 'Entrenamiento personal en Madrid',
-      },
-      {
-        title: 'Soy deportista y quiero rendir más',
-        text: 'Preparación física adaptada a tu deporte, tu nivel y tu temporada.',
-        href: '/preparador-fisico-madrid/',
-        linkLabel: 'Preparación física para deportistas',
-      },
-      {
-        title: 'Juego al baloncesto',
-        text: 'Físico y pista con alguien que también juega y entrena.',
-        href: '/entrenador-baloncesto-madrid/',
-        linkLabel: 'Entrenamiento personalizado de baloncesto',
-      },
-      {
-        title: 'No puedo entrenar presencialmente',
-        text: 'Plan y seguimiento online, vivas donde vivas.',
-        href: '/entrenamiento-online/',
-        linkLabel: 'Entrenamiento online con seguimiento',
-      },
-    ],
-  },
-
   services: {
-    label: 'Índice de servicios',
+    label: '¿Entrenamos?', 
     title: 'Cuatro formas de entrenar conmigo',
     accent: 'entrenar',
     intro: 'Misma base en todas: valorar, planificar, entrenar y revisar. Cambia el objetivo y el formato.',
@@ -96,7 +62,6 @@ export const home = {
   },
 
   method: {
-    label: 'Método · 4 bloques',
     title: 'Cada carga tiene un porqué',
     accent: 'porqué',
     steps: [
@@ -135,15 +100,6 @@ export const home = {
     sheetCaption: 'Ficha técnica',
     link: 'Conoce mi trayectoria',
     photoAlt: 'Retrato de Emilio Congosto Pérez',
-  },
-
-  basket: {
-    label: 'Especialidad · Baloncesto',
-    title: 'Físico y pista en la misma sesión',
-    accent: 'pista',
-    text: 'Salto, cambios de dirección y fuerza específica, combinados con trabajo técnico individual. Para jugadores en formación, amateurs y federados que quieren entrenar como juegan.',
-    notation: ['Físico específico', 'Técnica individual', 'Jugador · Entrenador · PF'],
-    cta: 'Entrenamiento personalizado de baloncesto',
   },
 
   pricing: {
@@ -188,7 +144,6 @@ export const home = {
   },
 
   ctaFinal: {
-    label: 'Siguiente bloque',
     title: 'Entrena con criterio.',
     accent: 'criterio.',
     text: 'Cuéntame tu objetivo y de dónde partes. Te respondo personalmente y vemos cómo encajarlo.',
