@@ -10,12 +10,12 @@ import styles from './PricingPreview.module.css';
 
 /**
  * Avance de tarifas (Home) según el modo de visualización: filas tipo hoja de planificación.
- * @param {{ content: { label: string, title: string, accent?: string, intro?: string, planIds: string[], cta: string } }} props
+ * @param {{ content: { label: string, title: string, accent?: string, intro?: string, planIds: string[], cta: string, tone?: "ink"|"paper" } }} props
  */
 export default function PricingPreview({ content }) {
   const plans = content.planIds.map((id) => pricing.plans.find((p) => p.id === id)).filter(Boolean);
   return (
-    <Section tone="ink" labelledBy="tarifas-avance">
+    <Section tone={content.tone || "ink"} labelledBy="tarifas-avance">
       <div className={styles.grid}>
         <div className={styles.head}>
           <SectionHeading

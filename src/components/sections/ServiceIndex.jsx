@@ -16,7 +16,7 @@ import styles from './ServiceIndex.module.css';
  */
 export default function ServiceIndex({ content }) {
   return (
-    <Section tone="dark" labelledBy="servicios" className={styles.section}>
+    <Section tone="paper" labelledBy="servicios" className={styles.section}>
       <div className={styles.grid}>
         <div className={styles.aside}>
           <SectionHeading

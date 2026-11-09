@@ -87,3 +87,31 @@
     padding-inline: var(--sp-7);
   }
 }
+
+/* Variante sobre fondo claro (Home): líneas y textos secundarios para papel; la tarjeta granate se fuerza a blanco */
+:global([data-tone='paper']) .list {
+  border-top-color: var(--ecp-line-light);
+}
+:global([data-tone='paper']) .item {
+  border-bottom-color: var(--ecp-line-light);
+}
+:global([data-tone='paper']) .num,
+:global([data-tone='paper']) .text {
+  color: var(--ecp-muted);
+}
+:global([data-tone='paper']) .featured {
+  border-bottom-color: var(--ecp-red-deep);
+}
+:global([data-tone='paper']) .featured,
+:global([data-tone='paper']) .featured .num,
+:global([data-tone='paper']) .featured .name,
+:global([data-tone='paper']) .featured .text,
+:global([data-tone='paper']) .featured .foot,
+:global([data-tone='paper']) .featured .foot a,
+:global([data-tone='paper']) .featured .chips li,
+:global([data-tone='paper']) .featured .itemHead span {
+  color: var(--ecp-white);
+}
+:global([data-tone='paper']) .featured .foot a::after {
+  background: var(--ecp-white);
+}

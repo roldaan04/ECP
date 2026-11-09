@@ -7,7 +7,7 @@ export const about = {
     path: '/sobre-mi/',
   },
   hero: {
-    label: 'ECP · Sobre mí',
+    label: 'ECP',
     title: 'Emilio Congosto Pérez',
     lead: 'Preparador físico y entrenador personal en Madrid. Graduado en CAFYD, jugador y entrenador de baloncesto. Entreno a personas de todas las edades, en persona y online.',
     photoAlt: 'Retrato de Emilio Congosto Pérez',
@@ -22,7 +22,7 @@ export const about = {
       'Con cada persona que entreno, sea deportista o no, hago lo mismo: escuchar, valorar de dónde parte, planificar con sentido y ajustar con lo que vamos viendo.',
     ],
   },
-  sheetCaption: 'Ficha técnica',
+  sheetCaption: 'Sobre mí',
   timeline: {
     label: 'Trayectoria',
     title: 'Formación y experiencia',

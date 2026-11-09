@@ -63,3 +63,15 @@
     gap: var(--sp-9);
   }
 }
+
+/* Variante sobre fondo claro */
+:global([data-tone='paper']) .list {
+  border-top-color: var(--ecp-line-light);
+}
+:global([data-tone='paper']) .row {
+  border-bottom-color: var(--ecp-line-light);
+}
+:global([data-tone='paper']) .summary,
+:global([data-tone='paper']) .note {
+  color: var(--ecp-muted);
+}
